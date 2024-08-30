@@ -18,6 +18,8 @@ int N = 1000;
 
 void arr_sorter(int *a, int size);
 
+void print_arr(int *a, int size);
+
 int main(){
 
     //------------Inicializo la random seed------------//
@@ -26,27 +28,28 @@ int main(){
     for (int i = 0; i < arr_size; i++){
         arr[i] = (rand()%N);
     }
-    //-----------Contenido del array sin ordenar---------------/
-    for (int i = 0; i<arr_size; i++){
-        printf(" %*d", 5, arr[i]);
-        if ((i+1)%10 == 0){
-            printf("\n");
-        }
-    }
-    printf("\n");
+    //-----------Contenido del array sin ordenar---------------//
+    printf("                      Array desordenado\n");
+    print_arr(pA, arr_size);
 
+    //-----------Ordena el array------------------//
     arr_sorter(pA, arr_size);
 
     //-----------Contenido del array ordenado---------------/
-    for (int i = 0; i<arr_size; i++){
-        printf(" %*d", 5, arr[i]);
-        if ((i+1)%10 == 0){
-            printf("\n");
-        }
-    }
-    printf("\n");
-
+    printf("                      Array ordenado\n");
+    print_arr(pA, arr_size);
     return 0;
+}
+
+void print_arr(int *a, int size){
+    for (int i = 0; i < size; i++){
+            printf(" %*d", 5, *a);
+            if ((i+1)%10 == 0){
+                printf("\n");
+            }
+            a++;
+        }
+        printf("\n");
 }
 
 void arr_sorter(int *a, int size){
