@@ -8,6 +8,9 @@
 #include <cstdlib>
 #include <cstdio>
 #include <time.h>
+//Alumno: Peceto, Iván Gabriel      Legajo: 7197
+//Comando para compilar en linux: g++ -Wall -g ./arr_sorter.cpp -o arr_sorter
+
 
 using namespace std;
 
